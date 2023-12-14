@@ -20,3 +20,4 @@ def reset_offset(consumer, partitions):
 
 
 consumer = Consumer(kafka_consumer_config)
+consumer.subscribe([constants.KAFKA_CONSUME_JOB_TOPIC], on_assign=reset_offset)
